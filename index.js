@@ -393,7 +393,7 @@ function randomize(data){
     tempArray.push(data[choiceIndex]);
     data.splice(choiceIndex, 1);
   }
-  for (let i = 0; i < loopLength; i++){
+  for (let i = 0; i < loopLength; i++){ // I could return tempArray here, but you asked for the same array
     data.push(tempArray.pop());
   }
   return data;

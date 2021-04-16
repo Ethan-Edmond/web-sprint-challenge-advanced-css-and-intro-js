@@ -404,9 +404,26 @@ console.log(randomize(artists));
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- 
- 
- 
+// I could maybe use map for the stretch 1 question.
+
+function get20sFilter(array){
+  let in20s = (year) => {
+    return (year >= 1900 && year < 2000);
+  };
+  let from20s = (artist) => {
+    return in20s(artist.years.split(" ")[0]);
+  };
+  return array.filter(from20s);
+}
+
+console.log(get20sFilter(artists));
+
+function lotsOfArtFilter(array){
+  return array.filter((artist) => artist.paintings > 100);
+}
+
+console.log(lotsOfArtFilter(artists));
+
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
  function foo(){
   console.log('its working');

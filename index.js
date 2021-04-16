@@ -390,7 +390,9 @@ function getHTML(data){
     artistHtml += '</div>';
     returnArray.push(artistHtml);
   }
-  return returnArray;
+  for (let htmlem of returnArray){
+    console.log(htmlem);
+  }
 }
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪

@@ -135,6 +135,16 @@ button:hover{
     width:100%;
 }
 
+/* Tablet Styles */
+@media(max-width:1000px){
+    nav {
+        width: 48%;
+    }
+    .artist img {
+        height: 40vh;
+    }
+}
+
 /* Mobile Styles */
 
 @media(max-width: 500px){

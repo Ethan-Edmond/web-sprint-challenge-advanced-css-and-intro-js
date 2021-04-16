@@ -349,22 +349,57 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+console.log(artists[0]);
+function getHTML(data){
+  // ok, I'm kind of assuming some things about the data, so it probably won't
+  // actually work with what you're thinking
 
-    /* Code here */
+  // Ok first problem, I don't know how to get an image for each artist.
 
+  let returnArray = [];
+  let htmlDivs = ["image", "name", "bio"];
+
+  for (let artist of data){
+    let imageUrl = '#';         // Change this later;
+    let artistHtml = '<div id="artist">\n';
+
+    for (let div of htmlDivs) {
+      artistHtml += `  <div class="${div}">\n`;
+      if (div === 'image'){
+        artistHtml += `    <img src="${imageUrl}"/>\n`;
+      } else if (div === 'name') {
+        artistHtml += `    <a href="${artist.wikipedia}"> ${artist.name}</a>\n`;
+      } else {
+        artistHtml += "    " + artist.bio + '\n';
+      }
+      artistHtml += '  </div>\n';
+    }
+    artistHtml += '</div>';
+    returnArray.push(artistHtml);
   }
+  return returnArray;
+}
 
+console.log(getHTML(artists));
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(data){
+  let tempArray = [];
+  let loopLength = data.length;
+  for (let i = 0; i < loopLength; i++){
+    let choiceIndex = Math.floor(Math.random() * data.length);
+    tempArray.push(data[choiceIndex]);
+    data.splice(choiceIndex, 1);
   }
+  for (let i = 0; i < loopLength; i++){
+    data.push(tempArray.pop());
+  }
+  return data;
+}
 
+console.log(randomize(artists));
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */

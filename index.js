@@ -225,20 +225,25 @@ console.log(artists[8].name);
 // I don't really know what array method I would use here, I'm not really
 // changing the array, I'm changing a property of a contained object.
 
-// how about this?
-{
-  let vanDough = artists[8];
-  vanDough.name = "Vincent Van Gogh";
-  artists.splice(8, 1, vanDough);
-}
+// // how about this?
+// {
+//   let vanDough = artists[8];
+//   vanDough.name = "Vincent Van Gogh";
+//   artists.splice(8, 1, vanDough);
+//   console.log(artists);
+// }
 
-// Or this?
-{
-  let goghGetter = (artist) => {
-    return artist.name === "Vincent Van Dough";
-  };
-  artists.filter(goghGetter)[0].name = "Vincent Van Gogh";
-}
+// // Or this?
+// {
+//   let goghGetter = (artist) => {
+//     return artist.name === "Vincent Van Dough";
+//   };
+//   let vanGogh = artists.filter(goghGetter);
+//   if (vanGogh.length){
+//     artists.filter(goghGetter)[0].name = "Vincent Van Gogh";
+//   }
+//   console.log(artists);
+// }
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -273,9 +278,6 @@ function get20s(array){
   }
   return tempArray;
 }
-
-console.log(get20s(artists));
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
@@ -339,10 +341,6 @@ function lotsOfArt(array){
   return tempArray;
 }
 
-console.log(lotsOfArt(artists));
-
-
-
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
 Programmatically console.log HTML element structure.
@@ -365,7 +363,6 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-console.log(artists[0]);
 function getHTML(data){
   // ok, I'm kind of assuming some things about the data, so it probably won't
   // actually work with what you're thinking
@@ -396,8 +393,6 @@ function getHTML(data){
   return returnArray;
 }
 
-console.log(getHTML(artists));
-
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
@@ -415,8 +410,6 @@ function randomize(data){
   return data;
 }
 
-console.log(randomize(artists));
-
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
@@ -432,13 +425,9 @@ function get20sFilter(array){
   return array.filter(from20s);
 }
 
-console.log(get20sFilter(artists));
-
 function lotsOfArtFilter(array){
   return array.filter((artist) => artist.paintings > 100);
 }
-
-console.log(lotsOfArtFilter(artists));
 
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
  function foo(){

@@ -221,8 +221,24 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
 
 artists[8].name = "Vincent Van Gogh";
 console.log(artists[8].name);
+
 // I don't really know what array method I would use here, I'm not really
 // changing the array, I'm changing a property of a contained object.
+
+// how about this?
+{
+  let vanDough = artists[8];
+  vanDough.name = "Vincent Van Gogh";
+  artists.splice(8, 1, vanDough);
+}
+
+// Or this?
+{
+  let goghGetter = (artist) => {
+    return artist.name === "Vincent Van Dough";
+  };
+  artists.filter(goghGetter)[0].name = "Vincent Van Gogh";
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  

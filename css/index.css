@@ -137,10 +137,22 @@ button:hover{
 
 /* Tablet Styles */
 @media(max-width:1000px){
+    /* Header Styles */
     nav {
         width: 48%;
     }
+    nav span {
+        margin: 0 3px;
+    }
+    /* Artist Styles */
+    .artist-container {
+        width: 100%;
+    }
+    .artist {
+        width: 45%;
+    }
     .artist img {
+        width: 90%;
         height: 40vh;
     }
 }
@@ -158,7 +170,7 @@ button:hover{
     }
         /* Keeps it looking better at smaller sizes */
     nav span {
-        margin: 5px;
+        margin: 0 5px;
     }
     /* Title Styles */
     .title-container div {

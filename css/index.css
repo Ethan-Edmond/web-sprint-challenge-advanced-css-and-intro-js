@@ -146,14 +146,14 @@ button:hover{
     nav a {
         font-size: 1.8rem;
     }
-    /* Keeps it looking better at smaller sizes */
+        /* Keeps it looking better at smaller sizes */
     nav span {
         margin: 5px;
     }
     /* Title Styles */
     .title-container div {
         width: 100%;
-        background-size: 300%;
+        background-size: 240%;
         height: 40vh;
         margin-bottom: 1%;
     }
@@ -168,4 +168,5 @@ button:hover{
     .title-container hr {
         width: 100%;
     }
+    /* Artist Styles */
 }

@@ -169,4 +169,22 @@ button:hover{
         width: 100%;
     }
     /* Artist Styles */
+    .artists-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+        /* I made this a bit wider than the design document, because it was too small */
+    .artist {
+        margin-top: 2%;
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    .artist img {
+        height: 25vh;
+        width: 60%;
+    }
+    .artist a {
+        font-size: 2rem;
+    }
 }

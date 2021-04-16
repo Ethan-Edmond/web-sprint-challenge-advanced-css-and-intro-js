@@ -138,6 +138,7 @@ button:hover{
 /* Mobile Styles */
 
 @media(max-width: 500px){
+    /* Header styles */
     nav {
         width: 50%;
         margin: 6% 0 1%;
@@ -149,9 +150,22 @@ button:hover{
     nav span {
         margin: 5px;
     }
+    /* Title Styles */
     .title-container div {
         width: 100%;
         background-size: 300%;
         height: 40vh;
+        margin-bottom: 1%;
+    }
+    .title-container h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+    .title-container button {
+        font-size: 1.4rem;
+        padding: 1% 5%;
+    }
+    .title-container hr {
+        width: 100%;
     }
 }
